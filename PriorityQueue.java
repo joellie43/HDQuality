@@ -1,6 +1,6 @@
-public interface PriorityQueue{
-    void add(int x);
+public interface PriorityQueue<T>{
+    void add(T x);
     boolean isEmpty();
-    int peekMin();
-    int removeMin();
+    T peekMin();
+    T removeMin();
 }
