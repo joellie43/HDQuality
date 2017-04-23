@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class HelpDesk{
     private static ArrayPriorityQueue _data;
-    private static ArrayList SERVICES; 
+    private static ArrayList services; 
 
     public HelpDesk(){
 	_data = new ArrayPriorityQueue();
@@ -57,7 +57,6 @@ public class HelpDesk{
 	    Ticket t = new Ticket(ticketNum, description, priority, name);
 	    //Enters ticket into _data(takes time to fix)
 	    _data.add(t);
-	    ticketNum++;
 
 	    //to check order of tickets
 	    //System.out.println(x);
@@ -67,7 +66,9 @@ public class HelpDesk{
 	    System.out.println("Input 0 for yes, 1 for no");
 	    Scanner m = new Scanner(System.in);
 	    goOn = Integer.parseInt(m.nextLine());
-	    if (goOn == 1){
+	    if (goOn == 0){
+		    ticketNum++;}
+	    else{
 		System.out.println("Thank you for your cooperation. We will begin to process your information shortly.");
 	    }
 	}
