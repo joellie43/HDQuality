@@ -6,18 +6,18 @@ public class HelpDesk{
 
     public HelpDesk(){
 	_data = new ArrayPriorityQueue();
-	SERVICES = new ArrayList<String>();
+	services = new ArrayList<String>();
 	//services from most to lease priority
-	SERVICES.add("please save my computer");
-	SERVICES.add("my cursor doesn't move");
-	SERVICES.add("I need to reset my password");
-	SERVICES.add("I need help with installing Microsoft Word");
+	services.add("please save my computer");
+	services.add("my cursor doesn't move");
+	services.add("I need to reset my password");
+	services.add("I need help with installing Microsoft Word");
 	
     }
 
     public static void printServices(){
-	for (int i = 0; i < SERVICES.size(); i++){
-	    System.out.println((i+1) + ". " + SERVICES.get(i));
+	for (int i = 0; i < services.size(); i++){
+	    System.out.println((i+1) + ". " + services.get(i));
 	}
     }
 
@@ -45,8 +45,8 @@ public class HelpDesk{
 	    Scanner s = new Scanner(System.in);
 	    String i = s.next();
 	    int servIndex = Integer.parseInt(i);
-	    String description = (String) SERVICES.get(servIndex-1);
-	    int priority = SERVICES.indexOf(description) + 1;
+	    String description = (String) services.get(servIndex-1);
+	    int priority = services.indexOf(description) + 1;
 	    
 	    //getting name
 	    System.out.println("\nWhat is your name?");
