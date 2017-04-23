@@ -15,6 +15,10 @@ public class Ticket<T> implements Comparable{
 	return _ID;
     }
 
+    public String getDescr(){
+	return descr;
+    }
+    
     public String getName(){
 	return name;
     }
