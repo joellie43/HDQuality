@@ -32,6 +32,16 @@ public class HelpDesk{
 	return retStr;
     }
     
+    public static void resolve(){
+        if (_data.size() > 6){
+            int rand = (int) Math.random();
+            for (int x = 0; x < rand; x++){
+                _data.removeMin();
+                System.out.println("Fixed your problem!! Hope everything works now :)");
+            }
+        }
+    }
+    
     public static void main(String[] args){
 	HelpDesk x = new HelpDesk();
 	int goOn = 0;
@@ -67,10 +77,12 @@ public class HelpDesk{
 	    Scanner m = new Scanner(System.in);
 	    goOn = Integer.parseInt(m.nextLine());
 	    if (goOn == 0){
+            resolve();
 		    ticketNum++;}
 	    else{
 		System.out.println("Thank you for your cooperation. We will begin to process your information shortly.");
 	    }
+        
 	}
     }
     

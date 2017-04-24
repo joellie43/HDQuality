@@ -75,6 +75,10 @@ public class ArrayPriorityQueue<T> implements PriorityQueue<T>{
 	}
 	return retStr;
     }
+    
+    public int size(){
+        return _data.size();
+    }
 
     public static void main(String[] args) {
 	ArrayPriorityQueue test = new ArrayPriorityQueue();

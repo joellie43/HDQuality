@@ -9,3 +9,4 @@
 4. That Ticket is added to the HelpDesk's data, maintaining order of priority (left to right = least to most priority). 
 5. The user is asked if he/she has any more problems. If the user inputs 0, the ID number is incremented by 1 and the process is repeated. If the user inputs 1, the prompting ends.
 ## Embellishments:
+ If the ArrayPriorityQueue has a size of larger than 6, the program randomly picks a number from 0-3, and solves that many problems following the ArrayPriorityQueue
