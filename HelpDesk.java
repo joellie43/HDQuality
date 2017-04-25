@@ -32,11 +32,14 @@ public class HelpDesk{
 	return retStr;
     }
     
-    public static void resolve(){
-        if (_data.size() > 6){
-            int rand = (int) Math.random();
+    public void resolve(){
+        if (_data.size() > 3){
+            int rand = (int) (Math.random()*2);
             for (int x = 0; x < rand; x++){
+                Ticket temp = (Ticket) _data.peekMin();
+                String name = temp.getName();
                 _data.removeMin();
+                System.out.print("Hello " + name + "! ");
                 System.out.println("Fixed your problem!! Hope everything works now :)");
             }
         }
@@ -77,7 +80,7 @@ public class HelpDesk{
 	    Scanner m = new Scanner(System.in);
 	    goOn = Integer.parseInt(m.nextLine());
 	    if (goOn == 0){
-            resolve();
+            x.resolve();
 		    ticketNum++;}
 	    else{
 		System.out.println("Thank you for your cooperation. We will begin to process your information shortly.");
